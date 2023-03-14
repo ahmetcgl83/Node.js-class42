@@ -19,7 +19,6 @@ app.post('/weather', (req, res) => {
     return;
   }
   const cityName = city;
-  console.log(cityName);
   res.status(200);
   res.send(cityName);
 });
