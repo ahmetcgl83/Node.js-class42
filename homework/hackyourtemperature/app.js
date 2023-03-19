@@ -27,4 +27,10 @@ app.post("/weather", async (req, res) => {
   res.send(info);
 });
 
+// Catch-all route
+app.use((req, res) => {
+  res.status(404);
+  res.send({ error: "404 Not Found" });
+});
+
 export default app;
